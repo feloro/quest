@@ -23,6 +23,14 @@ body {
   max-width: 90rem;
 }
 
+.card-img-top {
+  width: 240px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -32,4 +40,8 @@ footer p {
   margin-bottom: .25rem;
 }
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.box-shadow { box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .15) }
+
+.card-padding {
+  padding-bottom: 10px;
+}
