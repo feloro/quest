@@ -34,7 +34,7 @@
                         <img class="card-img-top" src="png/001-one.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <a class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#exampleModalCenter">Start</a>
+                            <a class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#exampleModalCenter" onclick="openModal(1)">Start</a>
                         </div>
                     </div>
                 </div>
@@ -132,17 +132,20 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title float-left jumbotron-heading" id="exampleModalLongTitle">Введите пароль</h1>
+                <h2 class="modal-title float-left" id="exampleModalLongTitle">Введите пароль</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                <input id="modalPassword" type="text" class="form-control modal-field" placeholder="Password"
+                       aria-describedby="basic-addon1">
+                <input id="modalIndex" hidden type="number">
             </div>
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" onclick="validatePassword()">Save changes</button>
             </div>
         </div>
     </div>
@@ -153,5 +156,8 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/shaEncryptor.js"></script>
+<script src="js/validator.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,60 +1,72 @@
 body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 :root {
-  --jumbotron-padding-y: 3rem;
+    --jumbotron-padding-y: 3rem;
 }
 
 .jumbotron {
-  margin-bottom: 0;
-  background-color: #fff;
+    margin-bottom: 0;
+    background-color: #fff;
 }
 
 .jumbotron p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .jumbotron-heading {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .jumbotron .container {
-  max-width: 90rem;
+    max-width: 90rem;
 }
 
 .card-img-top {
-  width: 240px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px 0 20px 0;
+    width: 240px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0 20px 0;
 }
 
 footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 footer p {
-  margin-bottom: .25rem;
+    margin-bottom: .25rem;
 }
 
 .box-shadow {
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .55);
-  border-radius: 5px;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .55);
+    border-radius: 5px;
 }
 
 .card-padding {
-  padding-bottom: 30px;
+    padding-bottom: 30px;
 }
 
-.btn {
-  min-height: 50px;
-  font-size: 21px;
-  border-radius: 0 0 4px 4px;
+.card .btn {
+    min-height: 50px;
+    font-size: 21px;
+    border-radius: 0 0 4px 4px;
 }
 
 .float-left {
-  float: left;
+    float: left;
+}
+
+.modal-field {
+    padding: 10px 0 10px 0;
+}
+
+.modal-footer {
+    border: 0;
+}
+
+.modal-title {
+    font-weight: 300;
 }
