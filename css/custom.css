@@ -28,7 +28,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+  padding: 20px 0 20px 0;
 }
 
 footer {
@@ -40,8 +40,21 @@ footer p {
   margin-bottom: .25rem;
 }
 
-.box-shadow { box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .15) }
+.box-shadow {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .55);
+  border-radius: 5px;
+}
 
 .card-padding {
-  padding-bottom: 10px;
+  padding-bottom: 30px;
+}
+
+.btn {
+  min-height: 50px;
+  font-size: 21px;
+  border-radius: 0 0 4px 4px;
+}
+
+.float-left {
+  float: left;
 }
