@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../png/favicon.png">
+
+    <title>Birthday quest</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet" >
 </head>
 <body>
     YAHOO!
     <a href="../index.html">Back</a>
+    <img id="img1">
+    <img id="img2">
+    <img id="img3">
 </body>
 </html>
+
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/shaEncryptor.js"></script>
+<script src="../js/validator.js"></script>
+<script>
+    window.onload = function(){
+        var url = new URL(window.location.href);
+        var key = url.searchParams.get("key");
+        $("#img1").attr("src", "https://i.imgur.com/"+key.substr(0,7)+".png");
+        $("#img2").attr("src", "https://i.imgur.com/"+key.substr(7,7)+".png");
+        $("#img3").attr("src", "https://i.imgur.com/"+key.substr(14,7)+".png");
+    };
+
+</script>
