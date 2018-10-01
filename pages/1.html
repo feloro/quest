@@ -14,9 +14,43 @@
 <body>
     YAHOO!
     <a href="../index.html">Back</a>
-    <img id="img1">
-    <img id="img2">
-    <img id="img3">
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 card-padding">
+                    <div class="card mb-4 box-shadow">
+                        <img id="img1" class="card-img-top" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <a id="img1a" class="btn btn-primary btn-block" type="button">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-padding">
+                    <div class="card mb-4 box-shadow">
+                        <img id="img2" class="card-img-top" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <a id="img2a" class="btn btn-primary btn-block" type="button">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-padding">
+                    <div class="card mb-4 box-shadow">
+                        <img id="img3" class="card-img-top" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <a id="img3a" class="btn btn-primary btn-block" type="button">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 
@@ -29,6 +63,7 @@
         var url = new URL(window.location.href);
         var key = url.searchParams.get("key");
         $("#img1").attr("src", "https://i.imgur.com/"+key.substr(0,7)+".png");
+        $("#img1a").attr("href", "https://i.imgur.com/"+key.substr(0,7)+".png");
         $("#img2").attr("src", "https://i.imgur.com/"+key.substr(7,7)+".png");
         $("#img3").attr("src", "https://i.imgur.com/"+key.substr(14,7)+".png");
     };
