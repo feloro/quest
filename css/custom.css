@@ -61,7 +61,7 @@ footer p {
 }
 
 .modal-field {
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
 }
 
 .modal-footer {
@@ -74,7 +74,6 @@ footer p {
 
 .card-text {
     font-size: 16px;
-    font-weight: 200;
     padding: 0 7px;
     text-align: center;
     min-height: 50px;

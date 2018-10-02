@@ -32,7 +32,7 @@ function validatePassword() {
     var message = $("#modalPassword").val();
     var index = $("#modalIndex").val();
     if (storage[index]===SHA256(message)) {
-        window.location.href = "pages/1.html?key="+message+"&page="+index;
+        window.location.href = "pages/task.html?key="+message+"&page="+index;
     } else {
         $('#exampleModalCenter').modal('hide');
     }
