@@ -6,21 +6,33 @@ var storage = {
     "E5fhKf8": "",
     "hEG8V1W": ""
 };
-var alphabet="абвгдеёжзиклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ.,?- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-alphabet+=alphabet;
 var messages = {
     "1": {
         "1": "Картинка 1",
         "2": "кR5zn6KEСG",
-        "3": {}
+        "description": "",
+        "title-name": ""
     }
 };
+
+var decoded = {
+    "1": {
+        "img1-description":"",
+        "img2-description":"",
+        "img3-description":"",
+        "description":"",
+        "title-name":""
+    }
+};
+
+var alphabet="абвгдеёжзиклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ.,?- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+alphabet+=alphabet;
 
 function validatePassword() {
     var message = $("#modalPassword").val();
     var index = $("#modalIndex").val();
     if (storage[index]===SHA256(message)) {
-        window.location.href = "pages/1.html?key="+message;
+        window.location.href = "pages/1.html?key="+message+"&page="+index;
     } else {
         $('#exampleModalCenter').modal('hide');
     }
@@ -31,18 +43,16 @@ function setMessage(page, index, str){
     var res="";
     for (var i=0; i<source.length; i++) {
         res += alphabet[alphabet.indexOf(source[i])+alphabet.indexOf(str[i%str.length])];
-        //res += String.fromCharCode(source[i].charCodeAt(0)+str[i%str.length]);
     }
     console.log(res);
     return res;
 }
 
-function getMessage(page, index, str){
-    var source = messages[page][index];
+function getMessage(page, field, str){
+    var source = messages[page][field];
     var res="";
     for (var i=0; i<source.length; i++) {
         res += alphabet[alphabet.lastIndexOf(source[i])-alphabet.indexOf(str[i%str.length])];
-        //res += String.fromCharCode(source[i].charCodeAt(0)+str[i%str.length]);
     }
     return res;
 }

@@ -12,8 +12,16 @@
     <link href="../css/custom.css" rel="stylesheet" >
 </head>
 <body>
-    YAHOO!
-    <a href="../index.html">Back</a>
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 id="title-name" class="jumbotron-heading">Место №</h1>
+            <p id="description" class="lead text-muted"></p>
+            <p>
+                <a href="../index.html" class="btn btn-primary my-2">Вернуться назад</a>
+            </p>
+            <hr>
+        </div>
+    </section>
 
     <div class="album py-5 bg-light">
         <div class="container">
@@ -24,7 +32,7 @@
                         <div class="card-body">
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.</p>
-                            <a id="img1a" class="btn btn-primary btn-block" type="button">Download</a>
+                            <a id="img1a" class="btn btn-primary btn-block" type="button">Скачать</a>
                         </div>
                     </div>
                 </div>
@@ -34,7 +42,7 @@
                         <div class="card-body">
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.</p>
-                            <a id="img2a" class="btn btn-primary btn-block" type="button">Download</a>
+                            <a id="img2a" class="btn btn-primary btn-block" type="button">Скачать</a>
                         </div>
                     </div>
                 </div>
@@ -44,7 +52,7 @@
                         <div class="card-body">
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.</p>
-                            <a id="img3a" class="btn btn-primary btn-block" type="button">Download</a>
+                            <a id="img3a" class="btn btn-primary btn-block" type="button">Скачать</a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +73,15 @@
         $("#img1").attr("src", "https://i.imgur.com/"+key.substr(0,7)+".png");
         $("#img1a").attr("href", "https://i.imgur.com/"+key.substr(0,7)+".png");
         $("#img2").attr("src", "https://i.imgur.com/"+key.substr(7,7)+".png");
+        $("#img2a").attr("src", "https://i.imgur.com/"+key.substr(7,7)+".png");
         $("#img3").attr("src", "https://i.imgur.com/"+key.substr(14,7)+".png");
+        $("#img3a").attr("src", "https://i.imgur.com/"+key.substr(14,7)+".png");
+
+        var page = url.searchParams.get("page");
+        var selector = $("#title-name");
+        selector.text(selector.text()+page);
+
+        $("#description").text(getMessage(index, "description", key));
     };
 
 </script>
